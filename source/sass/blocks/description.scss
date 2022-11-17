@@ -1,0 +1,28 @@
+.description {
+   background: url("../../img/penguins.jpg") 87.2% 101% no-repeat;
+
+  @include retina {
+    background: url("../../img/penguins@2x.jpg") 87.2% 44% no-repeat;
+    background-size: cover;
+  }
+}
+
+.description .container {
+  padding-top: 169px;
+  padding-bottom: 42px;
+  margin-bottom: 146px;
+}
+
+.description h2 {
+  margin: 0;
+  padding: 0;
+  margin-bottom: 24px;
+
+  @include font-settings (600, 28px, 1.5, $tangaroa);
+}
+
+.description p {
+  max-width: 512px;
+
+  @include font-settings (400, 16px, 1.5, $tangaroa);
+}

@@ -1,0 +1,73 @@
+.advantages {
+  background: url("../../img/advantages-bg-desk.jpg") center no-repeat;
+  background-size: cover;
+  min-width: 100%;
+
+  @include retina {
+    background: url("../../img/advantages-bg-desk@2x.jpg") center no-repeat;
+    background-size: cover;
+  }
+}
+
+.advantages .container {
+  padding-top: 110px;
+  padding-bottom: 120px;
+}
+
+.advantages h2 {
+  margin: 0;
+  margin-bottom: 49px;
+  padding: 0;
+  text-align: center;
+  @include font-settings(600, 28px, 1.5, $tangaroa);
+}
+
+.advantages__list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  column-gap: 40px;
+}
+
+.advantages__item {
+  position: relative;
+  background-color: $alice-blue;
+  padding: 81px 32px 46px 30px;
+
+  &::before {
+    position: absolute;
+    top: 30px;
+    left: 30px;
+    height: 32px;
+  }
+
+  &--ship::before {
+    content: url("../../img/svg/advantages-ship.svg");
+    width: 27px;
+  }
+
+  &--services::before {
+    content: url("../../img/svg/advantages-services.svg");
+    width: 38px;
+  }
+
+  &--tours::before {
+    content: url("../../img/svg/advantages-tours.svg");
+    width: 44px;
+  }
+}
+
+.advantages__item h3 {
+  margin: 0;
+  margin-bottom: 9px;
+  padding: 0;
+  @include font-settings(500, 18px, 1.5, $tangaroa);
+}
+
+.advantages__item p {
+  margin: 0;
+  padding: 0;
+  @include font-settings(400, 14px, 1.4, $tangaroa);
+}

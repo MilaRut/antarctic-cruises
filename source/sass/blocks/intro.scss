@@ -1,0 +1,35 @@
+.intro {
+  background: url("../../img/intro-desk.jpg") center no-repeat;
+  background-size: cover;
+  min-width: 100%;
+  margin-top: -100px;
+
+  @include retina {
+    background: url("../../img/intro-desk@2x.jpg") center no-repeat;
+    background-size: cover;
+  }
+}
+
+.intro .container {
+  padding-top: 271px;
+  padding-bottom: 285px;
+}
+
+.intro h1 {
+  margin: 0;
+  padding: 0;
+  padding-left: 95px;
+  margin-bottom: 11px;
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+
+  @include font-settings (700, 54px, 1.22, $alice-blue);
+}
+
+.intro p {
+  margin: 0;
+  padding: 0;
+  padding-left: 95px;
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+
+  @include font-settings (400, 20px, 1.2, $alice-blue);
+}
