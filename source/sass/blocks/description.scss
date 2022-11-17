@@ -1,16 +1,16 @@
-.description {
-   background: url("../../img/penguins.jpg") 87.2% 101% no-repeat;
-
-  @include retina {
-    background: url("../../img/penguins@2x.jpg") 87.2% 44% no-repeat;
-    background-size: cover;
-  }
-}
-
 .description .container {
-  padding-top: 169px;
+  padding-top: 176px;
   padding-bottom: 42px;
   margin-bottom: 146px;
+  background: url("../../img/penguins.jpg") 87.2% 101% no-repeat;
+
+  @include vp-1023 {
+    padding-top: 64px;
+    background-size: 42.2%;
+    background-position: 88.8% 35.9%;
+    padding-bottom: 20px;
+    margin-bottom: 57px;
+  }
 }
 
 .description h2 {
@@ -19,10 +19,21 @@
   margin-bottom: 24px;
 
   @include font-settings (600, 28px, 1.5, $tangaroa);
+
+  @include vp-1023 {
+    max-width: 300px;
+    font-size: 26px;
+    line-height: 1.4;
+    margin-bottom: 16px;
+  }
 }
 
 .description p {
   max-width: 512px;
 
   @include font-settings (400, 16px, 1.5, $tangaroa);
+
+  @include vp-1023 {
+    max-width: 324px;
+  }
 }

@@ -1,19 +1,48 @@
 .footer {
   background-color: $tangaroa;
   min-height: 138px;
+
+  @include vp-1023 {
+    min-height: 120px;
+  }
 }
 
 .footer .container {
   display: flex;
   padding-top: 50px;
+
+  @include vp-1023 {
+    padding-top: 47px;
+  }
 }
 
 .footer__logo {
   margin-right: 40px;
+
+  @include vp-1023 {
+    margin-right: 25px;
+    width: 38px;
+    height: 20px;
+    padding-top: 3px;
+  }
 }
 
 .footer__nav {
   margin-right: auto;
+  display: flex;
+  padding-top: 8px;
+
+  @include vp-1023 {
+    padding-top: 0;
+  }
+}
+
+.footer__nav .nav__link {
+  @include vp-1023 {
+    font-size: 12px;
+    line-height: 1.25;
+    padding-bottom: 5px;
+  }
 }
 
 .footer__socials {
@@ -28,8 +57,24 @@
   padding-top: 10px;
   display: flex;
   flex-wrap: wrap;
+
+  @include vp-1023 {
+    padding-top: 3px;
+  }
 }
 
 .footer__socials-item:not(:last-child) {
   margin-right: 28px;
+
+  @include vp-1023 {
+    margin-right: 20px;
+  }
+
+}
+
+.footer__socials-icon {
+  @include vp-1023 {
+    width: 17px;
+    height: 16px;
+  }
 }

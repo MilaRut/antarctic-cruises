@@ -8,6 +8,16 @@
   padding-top: 35px;
   display: flex;
   justify-content: space-between;
+
+  @include vp-1023 {
+    padding-top: 20px;
+  }
 }
 
-
+.header__logo {
+  @include vp-1023 {
+    width: 38px;
+    height: 20px;
+    padding-top: 10px;
+  }
+}

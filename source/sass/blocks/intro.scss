@@ -1,18 +1,26 @@
 .intro {
-  background: url("../../img/intro-desk.jpg") center no-repeat;
-  background-size: cover;
+  background: url("../../img/intro.jpg") center no-repeat;
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+  background-size: 100%;
   min-width: 100%;
   margin-top: -100px;
 
-  @include retina {
-    background: url("../../img/intro-desk@2x.jpg") center no-repeat;
-    background-size: cover;
+  @include vp-1023 {
+    background: url("../../img/intro.jpg") center no-repeat;
+    filter: none;
+    margin-top: -133px;
+    background-size: 112%;
   }
 }
 
 .intro .container {
   padding-top: 271px;
-  padding-bottom: 285px;
+  padding-bottom: 278px;
+
+  @include vp-1023 {
+  padding-top: 301px;
+  padding-bottom: 301px;
+  }
 }
 
 .intro h1 {
@@ -23,6 +31,12 @@
   text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 
   @include font-settings (700, 54px, 1.22, $alice-blue);
+
+  @include vp-1023 {
+    font-size: 50px;
+    padding-left: 0;
+    margin-bottom: 13px;
+  }
 }
 
 .intro p {
@@ -32,4 +46,9 @@
   text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 
   @include font-settings (400, 20px, 1.2, $alice-blue);
+
+  @include vp-1023 {
+    font-size: 18px;
+    padding-left: 0;
+  }
 }

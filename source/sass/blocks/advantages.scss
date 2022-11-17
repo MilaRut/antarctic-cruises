@@ -2,16 +2,16 @@
   background: url("../../img/advantages-bg-desk.jpg") center no-repeat;
   background-size: cover;
   min-width: 100%;
-
-  @include retina {
-    background: url("../../img/advantages-bg-desk@2x.jpg") center no-repeat;
-    background-size: cover;
-  }
 }
 
 .advantages .container {
   padding-top: 110px;
   padding-bottom: 120px;
+
+  @include vp-1023 {
+    padding-top: 90px;
+    padding-bottom: 100px;
+  }
 }
 
 .advantages h2 {
@@ -20,6 +20,10 @@
   padding: 0;
   text-align: center;
   @include font-settings(600, 28px, 1.5, $tangaroa);
+
+  @include vp-1023 {
+    font-size: 26px;
+  }
 }
 
 .advantages__list {
@@ -28,7 +32,11 @@
   padding: 0;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  column-gap: 40px;
+  grid-gap: 40px;
+
+  @include vp-1023 {
+    column-gap: 30px;
+  }
 }
 
 .advantages__item {
@@ -40,22 +48,52 @@
     position: absolute;
     top: 30px;
     left: 30px;
-    height: 32px;
   }
 
   &--ship::before {
-    content: url("../../img/svg/advantages-ship.svg");
+    content: "";
+    background: url("../../img/svg/advantages-ship.svg") center no-repeat;
+    background-size: 27px 32px;
     width: 27px;
+    height: 32px;
   }
 
   &--services::before {
-    content: url("../../img/svg/advantages-services.svg");
+    content: "";
+    background: url("../../img/svg/advantages-services.svg") center no-repeat;
+    background-size: 38px 32px;
     width: 38px;
+    height: 32px;
   }
 
   &--tours::before {
-    content: url("../../img/svg/advantages-tours.svg");
+    content: "";
+    background: url("../../img/svg/advantages-tours.svg") center no-repeat;
+    background-size: 44px 32px;
     width: 44px;
+    height: 32px;
+  }
+
+  @include vp-1023 {
+    padding: 70px 10px 21px 20px;
+
+    &::before {
+      top: 23px;
+      left: 16px;
+    }
+
+    &--ship::before {
+      background-size: 21px 26px;
+    }
+
+    &--services::before {
+      background-size: 27px 26px;
+      left: 14px;
+    }
+
+    &--tours::before {
+      background-size: 36px 26px;
+    }
   }
 }
 
@@ -64,10 +102,26 @@
   margin-bottom: 9px;
   padding: 0;
   @include font-settings(500, 18px, 1.5, $tangaroa);
+
+  @include vp-1023 {
+    line-height: 1.38;
+  }
+}
+
+.advantages__item--tours h3 {
+  @include vp-1023 {
+    margin-bottom: 20px;
+  }
 }
 
 .advantages__item p {
   margin: 0;
   padding: 0;
   @include font-settings(400, 14px, 1.4, $tangaroa);
+
+  @include vp-1023 {
+    line-height: 1.43;
+  }
 }
+
+
