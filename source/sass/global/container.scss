@@ -4,6 +4,10 @@
   margin: 0 auto;
   padding: 0 103px;
 
+  @include vp-1279 {
+    padding: 0 80px;
+  }
+
   @include vp-1023 {
     padding: 0 45px;
   }

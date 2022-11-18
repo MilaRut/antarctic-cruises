@@ -1,21 +1,21 @@
 .description .container {
   padding-top: 176px;
-  padding-bottom: 42px;
-  margin-bottom: 146px;
-  background: url("../../img/penguins.jpg") 87.2% 101% no-repeat;
+  padding-bottom: 72px;
+  margin-bottom: 132px;
+  background: url("../../img/penguins.jpg") 87.2% 90% no-repeat;
+  background-size: 41%;
 
   @include vp-1023 {
     padding-top: 64px;
     background-size: 42.2%;
-    background-position: 88.8% 35.9%;
+    background-position: 88.8% 38.9%;
     padding-bottom: 20px;
-    margin-bottom: 57px;
+    margin-bottom: 73px;
   }
 }
 
 .description h2 {
   margin: 0;
-  padding: 0;
   margin-bottom: 24px;
 
   @include font-settings (600, 28px, 1.5, $tangaroa);
@@ -29,7 +29,8 @@
 }
 
 .description p {
-  max-width: 512px;
+  margin: 0;
+  max-width: 46%;
 
   @include font-settings (400, 16px, 1.5, $tangaroa);
 
