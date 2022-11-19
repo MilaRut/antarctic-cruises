@@ -2,9 +2,9 @@
 <html lang="ru">
 
 <head>
-  <meta charset="UTF-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Сайт круизной компании. Круизы в Антарктику.">
   <title>Antarctic Cruises</title>
   <link rel="stylesheet" href="css/style.min.css">
@@ -22,11 +22,16 @@
   <div class="wrapper">
     <header class="header">
       <div class="container">
-        <a class="header__logo">
-          <img src="./img/svg/logo-desk.svg" width="70" height="38" alt="Логотип круизной компании." class="header__logo-img">
-        </a>
-        <nav class="header__nav nav">
-          <ul class="nav__list">
+        <nav class="header__nav header__nav--nojs nav">
+          <a class="header__logo">
+            <svg class="header__logo-img" width="70" height="38">
+              <use xlink:href="./img/sprite.svg#logo"></use>
+            </svg>
+          </a>
+          <button class="header__button"></button>
+          <!-- <label for="checkbox" class="label"></label>
+          <input type="checkbox" id="checkbox" class="checkbox"> -->
+          <ul class="header__nav-list nav__list">
             <li class="nav__item">
               <a href="#advantages" class="nav__link">Преимущества</a>
             </li>
@@ -46,17 +51,22 @@
     <main>
       <section class="intro">
         <div class="container">
-          <h1>Круизы в Антарктику</h1>
+          <h1>Круизы в&nbsp;Антарктику</h1>
           <p>Волшебный мир айсбергов и пингвинов</p>
         </div>
       </section>
       <section class="description">
         <div class="container">
-          <h2>Путешествие на&nbsp;край Земли</h2>
-          <p>Это волшебное путешествие поможет вам познакомиться поближе с&nbsp;удивительным миром Антарктики. Наш круизный
-            лайнер отвезет вас на&nbsp;край Земли, где вы&nbsp;сможете увидеть: ледяные айсберги, несколько видов пингвинов,
-            китов,
-            морских котиков и&nbsp;многое другое.</p>
+          <div class="description__content">
+            <h2>Путешествие на&nbsp;край Земли</h2>
+            <p>Это волшебное путешествие поможет вам познакомиться поближе с&nbsp;удивительным миром Антарктики. Наш
+              круизный
+              лайнер отвезет вас на&nbsp;край Земли, где вы&nbsp;сможете увидеть: ледяные айсберги, несколько видов
+              пингвинов,
+              китов,
+              морских котиков и&nbsp;многое другое.</p>
+          </div>
+          <img src="./img/penguins.jpg" alt="Фото антарктических пингвинов." class="description__image">
         </div>
       </section>
       <section class="advantages" id="advantages">
@@ -65,17 +75,20 @@
           <ul class="advantages__list">
             <li class="advantages__item advantages__item--ship">
               <h3>Небольшой круизный лайнер</h3>
-              <p>Круизный лайнер, рассчитанный всего лишь на&nbsp;300&nbsp;гостей, поможет избежать шума и&nbsp;очередей и&nbsp;даст
+              <p>Круизный лайнер, рассчитанный всего лишь на&nbsp;300&nbsp;гостей, поможет избежать шума и&nbsp;очередей
+                и&nbsp;даст
                 возможность насладиться видами и&nbsp;природой.</p>
             </li>
             <li class="advantages__item advantages__item--services">
               <h3>Система все&nbsp;включено</h3>
-              <p>Все наши круизы работают по&nbsp;системе &laquo;Все Включено&raquo;. Великолепные блюда и&nbsp;безлимитный бар доступны для
+              <p>Все наши круизы работают по&nbsp;системе &laquo;Все Включено&raquo;. Великолепные блюда
+                и&nbsp;безлимитный бар доступны для
                 вас 24&nbsp;часа.</p>
             </li>
             <li class="advantages__item advantages__item--tours">
               <h3>Экскурсионные туры на Zodiac</h3>
-              <p>Экскурсионные туры к&nbsp;берегам Антарктиды совершаются на&nbsp;оборудованных лодках типа Zodiack c&nbsp;опытными
+              <p>Экскурсионные туры к&nbsp;берегам Антарктиды совершаются на&nbsp;оборудованных лодках типа Zodiack
+                c&nbsp;опытными
                 экскурсоводами.</p>
             </li>
           </ul>
@@ -86,7 +99,8 @@
           <h2>Ближайшие круизы</h2>
           <ul class="catalog__list">
             <li class="catalog__item">
-              <img src="./img/cards/card-1.jpeg" width="260" height="386" alt="" class="catalog__image catalog__image--ast">
+              <img src="./img/cards/card-1.jpeg" width="260" height="386" alt=""
+                class="catalog__image catalog__image--ast">
               <h3>Круиз “Астория”</h3>
               <p>Маршрут</p>
               <span>Аргентина - Фолклендские острова - Антарктида</span>
@@ -112,7 +126,8 @@
               <a class="btn" href="#no_scroll">Забронировать</a>
             </li>
             <li class="catalog__item">
-              <img src="./img/cards/card-3.jpeg" width="260" height="386" alt="" class="catalog__image catalog__image--atl">
+              <img src="./img/cards/card-3.jpeg" width="260" height="386" alt=""
+                class="catalog__image catalog__image--atl">
               <h3>Круиз “Атлантис”</h3>
               <p>Маршрут</p>
               <span>Аргентина - Южная Георгия и Южные Сандвичевы Острова - Антарктида</span>
@@ -125,7 +140,8 @@
               <a class="btn" href="#no_scroll">Забронировать</a>
             </li>
             <li class="catalog__item">
-              <img src="./img/cards/card-4.jpeg" width="260" height="386" alt="" class="catalog__image catalog__image--odi">
+              <img src="./img/cards/card-4.jpeg" width="260" height="386" alt=""
+                class="catalog__image catalog__image--odi">
               <h3>Круиз “Одиссей”</h3>
               <p>Маршрут</p>
               <span>Аргентина - Фолклендские острова - Антарктида</span>
@@ -138,7 +154,8 @@
               <a class="btn" href="#no_scroll">Забронировать</a>
             </li>
             <li class="catalog__item">
-              <img src="./img/cards/card-5.jpeg" width="260" height="386" alt="" class="catalog__image catalog__image--oli">
+              <img src="./img/cards/card-5.jpeg" width="260" height="386" alt=""
+                class="catalog__image catalog__image--oli">
               <h3>Круиз “Олимпия”</h3>
               <p>Маршрут</p>
               <span>Чили - Антарктида</span>
@@ -151,7 +168,8 @@
               <a class="btn" href="#no_scroll">Забронировать</a>
             </li>
             <li class="catalog__item">
-              <img src="./img/cards/card-6.jpeg" width="260" height="386" alt="" class="catalog__image catalog__image--avr">
+              <img src="./img/cards/card-6.jpeg" width="260" height="386" alt=""
+                class="catalog__image catalog__image--avr">
               <h3>Круиз “Аврора”</h3>
               <p>Маршрут</p>
               <span>Аргентина - Антарктида - Чили</span>
@@ -164,7 +182,8 @@
               <a class="btn" href="#no_scroll">Забронировать</a>
             </li>
             <li class="catalog__item">
-              <img src="./img/cards/card-7.jpeg" width="260" height="386" alt="" class="catalog__image catalog__image--leo">
+              <img src="./img/cards/card-7.jpeg" width="260" height="386" alt=""
+                class="catalog__image catalog__image--leo">
               <h3>Круиз “Леонор”</h3>
               <p>Маршрут</p>
               <span>Чили - Южная Георгия - Антарктида - Аргентина</span>
@@ -177,7 +196,8 @@
               <a class="btn" href="#no_scroll">Забронировать</a>
             </li>
             <li class="catalog__item">
-              <img src="./img/cards/card-8.jpeg" width="260" height="386" alt="" class="catalog__image catalog__image--min">
+              <img src="./img/cards/card-8.jpeg" width="260" height="386" alt=""
+                class="catalog__image catalog__image--min">
               <h3>Круиз “Минион&nbsp;-&nbsp;1”</h3>
               <p>Маршрут</p>
               <span>Аргентина - Антарктида</span>
@@ -190,7 +210,7 @@
               <a class="btn" href="#no_scroll">Забронировать</a>
             </li>
           </ul>
-          </div>
+        </div>
       </section>
       <section class="booking">
         <div class="container">
@@ -215,7 +235,8 @@
       <section class="contacts" id="contacts">
         <div class="container">
           <h2 class="visually-hidden">Наши контакты</h2>
-          <p>У&nbsp;вас ещё остались вопросы или сомнения? Приезжайте к&nbsp;нам в&nbsp;офис и&nbsp;мы&nbsp;вам все расскажем.</p>
+          <p>У&nbsp;вас ещё остались вопросы или сомнения? Приезжайте к&nbsp;нам в&nbsp;офис и&nbsp;мы&nbsp;вам все
+            расскажем.</p>
           <address class="contacts__wrapper">
             <p>г. Санкт Петербург, ул. Большая Конюшенная, 19/8</p>
             <a href="tel:88002000000">8-800-200-00-00</a>
@@ -226,7 +247,8 @@
     <footer class="footer">
       <div class="container">
         <a class="footer__logo">
-          <img src="./img/svg/logo-desk.svg" width="70" height="38" alt="Логотип круизной компании." class="footer__logo-img">
+          <img src="./img/svg/logo-desk.svg" width="70" height="38" alt="Логотип круизной компании."
+            class="footer__logo-img">
         </a>
         <nav class="footer__nav nav">
           <ul class="nav__list">

@@ -7,10 +7,6 @@
   flex-wrap: wrap;
 }
 
-.header__nav .nav__list {
-  padding-top: 8px;
-}
-
 .nav__item:not(:last-child) {
   margin-right: 33px;
 
@@ -21,11 +17,4 @@
 
 .nav__link {
   @include font-settings(500, 16px, 1.25, $alice-blue);
-}
-
-.header__nav .nav__link {
-  @include vp-1023 {
-    font-size: 14px;
-    line-height: 1.21;
-  }
 }

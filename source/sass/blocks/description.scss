@@ -1,16 +1,52 @@
 .description .container {
-  padding-top: 176px;
-  padding-bottom: 72px;
-  margin-bottom: 132px;
-  background: url("../../img/penguins.jpg") 87.2% 90% no-repeat;
-  background-size: 41%;
+  padding-top: 119px;
+  margin-bottom: 146px;
+  display: flex;
 
   @include vp-1023 {
     padding-top: 64px;
-    background-size: 42.2%;
-    background-position: 88.8% 38.9%;
     padding-bottom: 20px;
     margin-bottom: 73px;
+  }
+
+  @include vp-767 {
+    flex-direction: column;
+    align-items: center;
+    padding-top: 58px;
+    margin-bottom: 65px;
+  }
+}
+
+.description__content {
+  display: flex;
+  flex-direction: column;
+  padding-top: 57px;
+  margin-right: auto;
+  padding-right: 30px;
+
+  @include vp-1023 {
+    padding-top: 0;
+    padding-right: 0;
+  }
+}
+
+.description__image {
+  max-width: 560px;
+  max-height: 301px;
+  object-fit: cover;
+
+  @include vp-1023 {
+    max-width: 329px;
+    max-height: 183px;
+    padding-top: 9px;
+    padding-right: 5px;
+  }
+
+  @include vp-767 {
+    margin: 0;
+    padding: 0;
+    min-width: 290px;
+    max-width: 100%;
   }
 }
 
@@ -26,15 +62,32 @@
     line-height: 1.4;
     margin-bottom: 16px;
   }
+
+  @include vp-767 {
+    max-width: 100%;
+    font-size: 24px;
+    margin-bottom: 15px;
+    text-align: center;
+  }
+
+  @include vp-374 {
+    max-width: 200px;
+    text-align: start;
+  }
 }
 
 .description p {
   margin: 0;
-  max-width: 46%;
+  max-width: 512px;
 
   @include font-settings (400, 16px, 1.5, $tangaroa);
 
   @include vp-1023 {
     max-width: 324px;
+  }
+
+  @include vp-767 {
+    max-width: 100%;
+    margin-bottom: 43px;
   }
 }
