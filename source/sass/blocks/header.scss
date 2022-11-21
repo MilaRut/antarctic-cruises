@@ -18,17 +18,17 @@
 
 .header__nav {
   display: flex;
-  justify-content: space-between;
 }
 
 .header__logo {
+  margin-right: auto;
+
   @include vp-1023 {
     padding-top: 10px;
   }
 
   @include vp-767 {
     padding-top: 0;
-    margin-right: auto;
   }
 }
 
@@ -48,34 +48,8 @@
 
 .header__button {
   display: none;
-}
-
-.header__nav .nav__list {
-  padding-top: 8px;
-}
-
-.header__nav .nav__link {
-  @include vp-1023 {
-    font-size: 14px;
-    line-height: 1.21;
-  }
 
   @include vp-767 {
-    font-size: 18px;
-  }
-}
-
-// mobile menu
-
-@include vp-767 {
-
-  // menu by enabled JavaScript
-
-  .header__nav-list {
-    display: none;
-  }
-
-  .header__button {
     display: block;
     position: relative;
     background-color: transparent;
@@ -97,6 +71,42 @@
       box-shadow: 0 6px 0 0 $alice-blue, 0 12px 0 0 $alice-blue;
     }
   }
+}
+
+.header__label {
+  display: none;
+}
+
+.header__nav .nav__list {
+  padding-top: 8px;
+
+  @include vp-767 {
+    display: none;
+  }
+}
+
+.header__nav .nav__item {
+  @include vp-767 {
+    margin-bottom: 26px;
+  }
+}
+
+.header__nav .nav__link {
+
+  @include vp-1023 {
+    font-size: 14px;
+    line-height: 1.21;
+  }
+
+  @include vp-767 {
+    font-size: 18px;
+    color: $tangaroa;
+  }
+}
+
+@include vp-767 {
+
+  // mobile menu by enabled JavaScript
 
   .header__nav--open {
     .header__button {
@@ -108,6 +118,7 @@
         left: 8px;
         background-color: $tangaroa;
         box-shadow: none;
+        transition: transform 0.2s ease-in;
       }
 
       &::before {
@@ -115,13 +126,25 @@
       }
 
       &::after {
-        transform: rotate(135deg);
+        transform: rotate(-45deg);
       }
     }
 
     .header__logo {
+      position: relative;
       z-index: 20;
       margin-left: 12%;
+
+      &::after {
+        position: absolute;
+        content: "";
+        height: 50px;
+        min-width: 240px;
+        background-color: $alice-blue;
+        top: -20px;
+        left: -15px;
+        z-index: -1;
+      }
     }
 
     .header__logo-img {
@@ -135,43 +158,86 @@
       right: 0;
       padding-top: 85px;
       padding-left: 25px;
-      // padding-bottom: 200px;
       height: 100vh;
       width: 89%;
       text-align: start;
       background-color: $alice-blue;
       overflow: scroll;
     }
+  }
 
-    .nav__item {
-      margin-bottom: 26px;
-    }
+  // mobile menu by disabled JavaScript
 
-    .nav__link {
-      color: $tangaroa;
+  .header__button.no-js {
+    display: none;
+  }
+
+  .header__label.no-js {
+    display: block;
+    order: 1;
+    position: relative;
+    background-color: transparent;
+    border: none;
+    width: 24px;
+    height: 24px;
+    cursor: pointer;
+    z-index: 100;
+
+    &::before,
+    &::after {
+      position: absolute;
+      content: "";
+      top: 4px;
+      left: 0;
+      width: 24px;
+      height: 2px;
+      background-color: $alice-blue;
+      box-shadow: 0 6px 0 0 $alice-blue, 0 12px 0 0 $alice-blue;
     }
   }
+
+  .header__checkbox:checked+.header__label {
+
+    &::before,
+    &::after {
+      width: 18px;
+      top: 10px;
+      left: 8px;
+      background-color: $tangaroa;
+      box-shadow: none;
+      transition: transform 0.2s ease-in;
+    }
+
+    &::before {
+      transform: rotate(45deg);
+    }
+
+    &::after {
+      transform: rotate(-45deg);
+    }
+  }
+
+  .header__checkbox:checked~.header__nav-list {
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding-top: 85px;
+    padding-left: 25px;
+    // height: 100vh;
+    padding-bottom: 250px;
+    width: 89%;
+    text-align: start;
+    background-color: $alice-blue;
+    color: $tangaroa;
+  }
+
+  .header__checkbox:checked~.header__logo {
+    z-index: 20;
+    margin-left: 12%;
+  }
+
+  .header__checkbox:checked~.header__logo>.header__logo-img {
+    fill: $tangaroa;
+  }
 }
-
-
-// .header__nav--nojs .header__button {
-//   display: none;
-// }
-
-// .checkbox:checked + .header__nav-list {
-//   display: block;
-//   position: absolute;
-//   top: 0;
-//   right: 0;
-//   padding-top: 85px;
-//   padding-left: 25px;
-//   // padding-bottom: 200px;
-//   height: 100vh;
-//   width: 89%;
-//   text-align: start;
-//   background-color: $alice-blue;
-// }
-
-// .checkbox:checked + .header__nav-list > .nav__link {
-//   color: $tangaroa;
-// }

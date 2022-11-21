@@ -22,15 +22,15 @@
   <div class="wrapper">
     <header class="header">
       <div class="container">
-        <nav class="header__nav header__nav--nojs nav">
+        <nav class="header__nav nav">
+          <input class="header__checkbox visually-hidden" type="checkbox" id="checkbox">
+          <label class="header__label no-js" for="checkbox"></label>
           <a class="header__logo">
             <svg class="header__logo-img" width="70" height="38">
               <use xlink:href="./img/sprite.svg#logo"></use>
             </svg>
           </a>
-          <button class="header__button"></button>
-          <!-- <label for="checkbox" class="label"></label>
-          <input type="checkbox" id="checkbox" class="checkbox"> -->
+          <button class="header__button no-js"></button>
           <ul class="header__nav-list nav__list">
             <li class="nav__item">
               <a href="#advantages" class="nav__link">Преимущества</a>
@@ -110,7 +110,7 @@
               <span>11 дней</span>
               <p>Цена </p>
               <span>от 11500 $</span>
-              <a class="btn" href="#no_scroll">Забронировать</a>
+              <a class="catalog__btn btn" href="#no_scroll">Забронировать</a>
             </li>
             <li class="catalog__item">
               <img src="./img/cards/card-2.jpeg" width="260" height="386" alt="" class="catalog__image">
@@ -123,7 +123,7 @@
               <span>20 дней</span>
               <p>Цена </p>
               <span>от 14500 $</span>
-              <a class="btn" href="#no_scroll">Забронировать</a>
+              <a class="catalog__btn btn" href="#no_scroll">Забронировать</a>
             </li>
             <li class="catalog__item">
               <img src="./img/cards/card-3.jpeg" width="260" height="386" alt=""
@@ -137,7 +137,7 @@
               <span>15 дней</span>
               <p>Цена </p>
               <span>от 14500 $</span>
-              <a class="btn" href="#no_scroll">Забронировать</a>
+              <a class="catalog__btn btn" href="#no_scroll">Забронировать</a>
             </li>
             <li class="catalog__item">
               <img src="./img/cards/card-4.jpeg" width="260" height="386" alt=""
@@ -151,7 +151,7 @@
               <span>11 дней</span>
               <p>Цена </p>
               <span>от 11500 $</span>
-              <a class="btn" href="#no_scroll">Забронировать</a>
+              <a class="catalog__btn btn" href="#no_scroll">Забронировать</a>
             </li>
             <li class="catalog__item">
               <img src="./img/cards/card-5.jpeg" width="260" height="386" alt=""
@@ -165,7 +165,7 @@
               <span>13 дней</span>
               <p>Цена </p>
               <span>от 9700 $</span>
-              <a class="btn" href="#no_scroll">Забронировать</a>
+              <a class="catalog__btn btn" href="#no_scroll">Забронировать</a>
             </li>
             <li class="catalog__item">
               <img src="./img/cards/card-6.jpeg" width="260" height="386" alt=""
@@ -179,7 +179,7 @@
               <span>14 дней</span>
               <p>Цена </p>
               <span>от 11700 $</span>
-              <a class="btn" href="#no_scroll">Забронировать</a>
+              <a class="catalog__btn btn" href="#no_scroll">Забронировать</a>
             </li>
             <li class="catalog__item">
               <img src="./img/cards/card-7.jpeg" width="260" height="386" alt=""
@@ -193,7 +193,7 @@
               <span>17 дней</span>
               <p>Цена </p>
               <span>от 12300 $</span>
-              <a class="btn" href="#no_scroll">Забронировать</a>
+              <a class="catalog__btn btn" href="#no_scroll">Забронировать</a>
             </li>
             <li class="catalog__item">
               <img src="./img/cards/card-8.jpeg" width="260" height="386" alt=""
@@ -207,26 +207,29 @@
               <span>11 дней</span>
               <p>Цена </p>
               <span>от 12300 $</span>
-              <a class="btn" href="#no_scroll">Забронировать</a>
+              <a class="catalog__btn btn" href="#no_scroll">Забронировать</a>
             </li>
           </ul>
         </div>
       </section>
       <section class="booking">
         <div class="container">
-          <h2>Раннее бронирование</h2>
-          <p>Забронируйте тур за 3-6 месяцев до даты выезда и сэкономьте до 50%</p>
-          <form action="https://echo.htmlacademy.ru/" method="get">
-            <h3>Оставьте заявку и мы свяжемся с вами в ближайшее время</h3>
+          <div class="booking__headings">
+            <h2>Раннее бронирование</h2>
+            <p>Забронируйте тур за&nbsp;3&#8209;6&nbsp;месяцев до&nbsp;даты&nbsp;выезда и&nbsp;сэкономьте до&nbsp;50%
+            </p>
+          </div>
+          <form id="form" class="booking__form" action="https://echo.htmlacademy.ru/" method="get">
+            <h3>Оставьте заявку и&nbsp;мы&nbsp;свяжемся с&nbsp;вами в&nbsp;ближайшее время</h3>
             <fieldset>
               <label for="name" class="visually-hidden"></label>
               <input type="text" name="username" placeholder="Имя" id="name" required>
               <label for="phone" class="visually-hidden"></label>
               <input type="tel" name="phone" placeholder="Телефон" id="phone" required>
               <label for="email" class="visually-hidden"></label>
-              <input type="email" name="email" placeholder="Email" id="email" required>
+              <input type="email" name="booking__form" placeholder="Email" id="email" required>
               <input class="visually-hidden" type="checkbox" name="agreement" id="agreement" checked required>
-              <label for="agreement">Я согласен на обработку моих персональных данных</label>
+              <label for="agreement">Я согласен на обработку моих&nbsp;персональных&nbsp;данных</label>
             </fieldset>
             <button class="btn" type="submit">Оставить заявку</button>
           </form>
@@ -235,34 +238,41 @@
       <section class="contacts" id="contacts">
         <div class="container">
           <h2 class="visually-hidden">Наши контакты</h2>
-          <p>У&nbsp;вас ещё остались вопросы или сомнения? Приезжайте к&nbsp;нам в&nbsp;офис и&nbsp;мы&nbsp;вам все
-            расскажем.</p>
-          <address class="contacts__wrapper">
-            <p>г. Санкт Петербург, ул. Большая Конюшенная, 19/8</p>
-            <a href="tel:88002000000">8-800-200-00-00</a>
-          </address>
+          <div class="contacts__map-wrapper">
+            <iframe class="contacts__map" title="Map"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.6037872533182!2d30.32085871558654!3d59.93871648187622!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCAxOTExODY!5e0!3m2!1sru!2sru!4v1649167384236!5m2!1sru!2sru"
+              style="border: 0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+          </div>
+          <div class="contacts__address-wrapper">
+            <h3>У&nbsp;вас ещё остались вопросы или сомнения? Приезжайте к&nbsp;нам в&nbsp;офис и&nbsp;мы&nbsp;вам все
+              расскажем.</h3>
+            <address class="contacts__address">
+              <p>г. Санкт Петербург, ул.&nbsp;Большая&nbsp;Конюшенная,&nbsp;19/8</p>
+              <a href="tel:88002000000">8-800-200-00-00</a>
+            </address>
+          </div>
         </div>
       </section>
     </main>
     <footer class="footer">
       <div class="container">
-        <a class="footer__logo">
+        <a href="#no_scroll" class="footer__logo">
           <img src="./img/svg/logo-desk.svg" width="70" height="38" alt="Логотип круизной компании."
             class="footer__logo-img">
         </a>
         <nav class="footer__nav nav">
           <ul class="nav__list">
             <li class="nav__item">
-              <a href="#advantages" class="nav__link">Преимущества</a>
+              <a href="#no_scroll" class="nav__link">Преимущества</a>
             </li>
             <li class="nav__item">
               <a href="#no_scroll" class="nav__link">Направления</a>
             </li>
             <li class="nav__item">
-              <a href="#catalog" class="nav__link">Ближайшие круизы</a>
+              <a href="#no_scroll" class="nav__link">Ближайшие круизы</a>
             </li>
             <li class="nav__item">
-              <a href="#contacts" class="nav__link">Контакты</a>
+              <a href="#no_scroll" class="nav__link">Контакты</a>
             </li>
           </ul>
         </nav>

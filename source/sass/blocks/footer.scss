@@ -5,6 +5,10 @@
   @include vp-1023 {
     min-height: 120px;
   }
+
+  @include vp-767 {
+    min-height: 283px;
+  }
 }
 
 .footer .container {
@@ -17,6 +21,7 @@
 
   @include vp-767 {
     flex-direction: column;
+    padding-top: 36px;
   }
 }
 
@@ -28,6 +33,12 @@
     width: 38px;
     height: 20px;
     padding-top: 3px;
+  }
+
+  @include vp-767 {
+    width: 42px;
+    height: 22px;
+    margin-bottom: 26px;
   }
 }
 
@@ -42,8 +53,17 @@
 }
 
 .footer__nav .nav__list {
+  justify-content: flex-start;
+  
   @include vp-767 {
     flex-direction: column;
+    margin-bottom: 14px;
+  }
+}
+
+.footer__nav .nav__item {
+  @include vp-767 {
+    margin-bottom: 8px;
   }
 }
 
@@ -65,11 +85,17 @@
   margin: 0;
   padding: 0;
   padding-top: 10px;
+  padding-left: 40px;
   display: flex;
   flex-wrap: wrap;
 
   @include vp-1023 {
     padding-top: 3px;
+  }
+
+  @include vp-767 {
+    padding: 0;
+    margin: 0;
   }
 }
 
@@ -80,6 +106,9 @@
     margin-right: 20px;
   }
 
+  @include vp-767 {
+    margin-right: 17px;
+  }
 }
 
 .footer__socials-icon {

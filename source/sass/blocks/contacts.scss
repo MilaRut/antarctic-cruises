@@ -1,0 +1,110 @@
+.contacts .container {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 120px;
+  padding-bottom: 120px;
+
+  @include vp-1023 {
+    padding-top: 100px;
+    padding-bottom: 100px;
+  }
+
+  @include vp-767 {
+    padding-top: 58px;
+    padding-bottom: 56px;
+    flex-direction: column;
+  }
+}
+
+.contacts__map-wrapper {
+  position: relative;
+  min-width: 560px;
+  height: 306px;
+  background: url("../img/map-desk.jpg") left no-repeat;
+
+  @include vp-1023 {
+    min-width: 324px;
+    height: 335px;
+    background: url("../img/map-tab.jpg") left no-repeat;
+  }
+
+  @include vp-767 {
+    min-width: 100%;
+    background: url("../img/map-mob.jpg") center no-repeat;
+    order: 1;
+  }
+}
+
+.contacts__map-wrapper .contacts__map {
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+}
+
+
+.contacts__address-wrapper {
+  max-width: 550px;
+  padding-top: 75px;
+  padding-left: 50px;
+
+  @include vp-1023 {
+    padding-top: 66px;
+    padding-left: 30px;
+  }
+
+  @include vp-767 {
+    padding: 0;
+    margin-bottom: 26px;
+  }
+}
+
+.contacts h3 {
+  margin: 0;
+  margin-bottom: 32px;
+  @include font-settings(500, 18px, 1.5, $tangaroa);
+
+  @include vp-1023 {
+    margin-bottom: 27px;
+  }
+
+  @include vp-767 {
+    margin-bottom: 28px;
+  }
+}
+
+.contacts__address p,
+.contacts__address a {
+  position: relative;
+  margin: 0;
+  margin-bottom: 21px;
+  padding-left: 28px;
+  @include font-settings(400, 16px, 1.5, $tangaroa);
+
+  &::before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 18px;
+  }
+
+  @include vp-767 {
+  margin-bottom: 20px;
+  }
+}
+
+
+.contacts__address p::before {
+  content: url('../../img/svg/contacts-address.svg');
+  height: 22px;
+
+  @include vp-1023 {
+    top: 5px;
+  }
+}
+
+.contacts__address a::before {
+  content: url('../../img/svg/contacts-phone.svg');
+  height: 18px;
+}
