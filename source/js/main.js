@@ -1,6 +1,6 @@
 import {iosVhFix} from './utils/ios-vh-fix';
-import {initModals} from './modules/modals/init-modals';
 import {openMenu, closeMenu} from './modules/menu';
+import {validateForm} from './modules/form-validation';
 
 // ---------------------------------
 
@@ -17,9 +17,9 @@ window.addEventListener('DOMContentLoaded', () => {
   // все скрипты должны быть в обработчике 'DOMContentLoaded', но не все в 'load'
   // в load следует добавить скрипты, не участвующие в работе первого экрана
   window.addEventListener('load', () => {
-    initModals();
     openMenu();
     closeMenu();
+    validateForm();
   });
 });
 

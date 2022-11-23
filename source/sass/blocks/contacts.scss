@@ -20,17 +20,20 @@
   position: relative;
   min-width: 560px;
   height: 306px;
-  background: url("../img/map-desk.jpg") left no-repeat;
+  background: #f1efea url("../img/map-desk.jpg") left no-repeat;
+  background-size: cover;
 
   @include vp-1023 {
     min-width: 324px;
     height: 335px;
-    background: url("../img/map-tab.jpg") left no-repeat;
+    background: #f1efea url("../img/map-tab.jpg") left no-repeat;
+    background-size: cover;
   }
 
   @include vp-767 {
     min-width: 100%;
-    background: url("../img/map-mob.jpg") center no-repeat;
+    background: #f1efea url("../img/map-mob.jpg") center no-repeat;
+    background-size: cover;
     order: 1;
   }
 }
@@ -63,6 +66,7 @@
 .contacts h3 {
   margin: 0;
   margin-bottom: 32px;
+
   @include font-settings(500, 18px, 1.5, $tangaroa);
 
   @include vp-1023 {
@@ -80,6 +84,7 @@
   margin: 0;
   margin-bottom: 21px;
   padding-left: 28px;
+
   @include font-settings(400, 16px, 1.5, $tangaroa);
 
   &::before {
@@ -90,13 +95,12 @@
   }
 
   @include vp-767 {
-  margin-bottom: 20px;
+    margin-bottom: 20px;
   }
 }
 
-
 .contacts__address p::before {
-  content: url('../../img/svg/contacts-address.svg');
+  content: url("../../img/svg/contacts-address.svg");
   height: 22px;
 
   @include vp-1023 {
@@ -105,6 +109,6 @@
 }
 
 .contacts__address a::before {
-  content: url('../../img/svg/contacts-phone.svg');
+  content: url("../../img/svg/contacts-phone.svg");
   height: 18px;
 }

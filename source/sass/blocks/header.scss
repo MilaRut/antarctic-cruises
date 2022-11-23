@@ -30,6 +30,10 @@
   @include vp-767 {
     padding-top: 0;
   }
+
+  @include hover {
+    opacity: 1;
+  }
 }
 
 .header__logo-img {
@@ -92,7 +96,6 @@
 }
 
 .header__nav .nav__link {
-
   @include vp-1023 {
     font-size: 14px;
     line-height: 1.21;
@@ -110,7 +113,6 @@
 
   .header__nav--open {
     .header__button {
-
       &::before,
       &::after {
         width: 18px;
@@ -196,8 +198,7 @@
     }
   }
 
-  .header__checkbox:checked+.header__label {
-
+  .header__checkbox:checked + .header__label {
     &::before,
     &::after {
       width: 18px;
@@ -217,7 +218,7 @@
     }
   }
 
-  .header__checkbox:checked~.header__nav-list {
+  .header__checkbox:checked ~ .header__nav-list {
     display: block;
     position: absolute;
     top: 0;
@@ -232,12 +233,12 @@
     color: $tangaroa;
   }
 
-  .header__checkbox:checked~.header__logo {
+  .header__checkbox:checked ~ .header__logo {
     z-index: 20;
     margin-left: 12%;
   }
 
-  .header__checkbox:checked~.header__logo>.header__logo-img {
+  .header__checkbox:checked ~ .header__logo > .header__logo-img {
     fill: $tangaroa;
   }
 }

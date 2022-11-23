@@ -36,6 +36,10 @@ body {
 a {
   color: $alice-blue;
   text-decoration: none;
+
+  @include hover {
+    opacity: 0.6;
+  }
 }
 
 img,

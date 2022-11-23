@@ -1,5 +1,5 @@
 @mixin font-settings ($weight, $fs, $lh, $color) {
-  font-family: "Montserrat", sans-serif;
+  font-family: "Montserrat", "Arial", sans-serif;
   font-style: normal;
   font-weight: $weight;
   font-size: $fs;

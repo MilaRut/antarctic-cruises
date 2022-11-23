@@ -4,6 +4,7 @@
   background-color: $alice-blue;
   border: none;
   cursor: pointer;
+  user-select: none;
 
   @include hover-focus {
     opacity: 0.8;

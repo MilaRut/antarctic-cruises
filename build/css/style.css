@@ -639,6 +639,10 @@ button,
   background-color: #f9fbfd;
   border: none;
   cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
 
 .btn.focus-visible:focus {
@@ -695,12 +699,16 @@ button,
   flex-wrap: wrap;
 }
 
+.nav__item {
+  max-width: 300px;
+}
+
 .nav__item:not(:last-child) {
   margin-right: 33px;
 }
 
 .nav__link {
-  font-family: "Montserrat", sans-serif;
+  font-family: "Montserrat", "Arial", sans-serif;
   font-style: normal;
   font-weight: 500;
   font-size: 16px;
@@ -709,9 +717,9 @@ button,
 }
 
 .intro {
-  background: url("../../img/intro.jpg") center no-repeat;
-  -webkit-filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
-  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+  background: #1c5691 url("../../img/intro.jpg") center no-repeat;
+  -webkit-filter: drop-shadow(0 4px 4px rgba(0, 0, 0, 0.25));
+  filter: drop-shadow(0 4px 4px rgba(0, 0, 0, 0.25));
   background-size: 100%;
   min-width: 100%;
   margin-top: -100px;
@@ -727,8 +735,8 @@ button,
   padding: 0;
   padding-left: 95px;
   margin-bottom: 11px;
-  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-  font-family: "Montserrat", sans-serif;
+  text-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+  font-family: "Montserrat", "Arial", sans-serif;
   font-style: normal;
   font-weight: 700;
   font-size: 54px;
@@ -740,8 +748,8 @@ button,
   margin: 0;
   padding: 0;
   padding-left: 95px;
-  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-  font-family: "Montserrat", sans-serif;
+  text-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+  font-family: "Montserrat", "Arial", sans-serif;
   font-style: normal;
   font-weight: 400;
   font-size: 20px;
@@ -768,10 +776,11 @@ button,
   padding-top: 57px;
   margin-right: auto;
   padding-right: 30px;
+  min-width: 350px;
 }
 
 .description__image {
-  max-width: 560px;
+  max-width: 100%;
   max-height: 301px;
   -o-object-fit: cover;
   object-fit: cover;
@@ -780,7 +789,7 @@ button,
 .description h2 {
   margin: 0;
   margin-bottom: 24px;
-  font-family: "Montserrat", sans-serif;
+  font-family: "Montserrat", "Arial", sans-serif;
   font-style: normal;
   font-weight: 600;
   font-size: 28px;
@@ -791,7 +800,7 @@ button,
 .description p {
   margin: 0;
   max-width: 512px;
-  font-family: "Montserrat", sans-serif;
+  font-family: "Montserrat", "Arial", sans-serif;
   font-style: normal;
   font-weight: 400;
   font-size: 16px;
@@ -800,7 +809,7 @@ button,
 }
 
 .advantages {
-  background: url("../../img/advantages-bg-desk.jpg") center no-repeat;
+  background: #d8e5f4 url("../../img/advantages.jpg") center no-repeat;
   background-size: cover;
   min-width: 100%;
 }
@@ -814,7 +823,7 @@ button,
   margin: 0;
   margin-bottom: 49px;
   text-align: center;
-  font-family: "Montserrat", sans-serif;
+  font-family: "Montserrat", "Arial", sans-serif;
   font-style: normal;
   font-weight: 600;
   font-size: 28px;
@@ -834,45 +843,18 @@ button,
 }
 
 .advantages__item {
-  position: relative;
   background-color: #f9fbfd;
-  padding: 81px 32px 46px 30px;
+  padding: 30px 32px 46px 30px;
 }
 
-.advantages__item::before {
-  position: absolute;
-  top: 30px;
-  left: 30px;
-}
-
-.advantages__item--ship::before {
-  content: "";
-  background: url("../../img/svg/advantages-ship.svg") center no-repeat;
-  background-size: 27px 32px;
-  width: 27px;
-  height: 32px;
-}
-
-.advantages__item--services::before {
-  content: "";
-  background: url("../../img/svg/advantages-services.svg") center no-repeat;
-  background-size: 38px 32px;
-  width: 38px;
-  height: 32px;
-}
-
-.advantages__item--tours::before {
-  content: "";
-  background: url("../../img/svg/advantages-tours.svg") center no-repeat;
-  background-size: 44px 32px;
-  width: 44px;
-  height: 32px;
+.advantages__icon {
+  margin-bottom: 12px;
 }
 
 .advantages__item h3 {
   margin: 0;
   margin-bottom: 9px;
-  font-family: "Montserrat", sans-serif;
+  font-family: "Montserrat", "Arial", sans-serif;
   font-style: normal;
   font-weight: 500;
   font-size: 18px;
@@ -882,7 +864,7 @@ button,
 
 .advantages__item p {
   margin: 0;
-  font-family: "Montserrat", sans-serif;
+  font-family: "Montserrat", "Arial", sans-serif;
   font-style: normal;
   font-weight: 400;
   font-size: 14px;
@@ -916,7 +898,7 @@ button,
   flex-direction: column;
   position: relative;
   background-color: #011c40;
-  padding: 29px 25px 23px;
+  padding: 29px 25px 22px;
   min-height: 386px;
   overflow: hidden;
 }
@@ -942,7 +924,7 @@ button,
   margin: 0;
   text-align: center;
   margin-bottom: 49px;
-  font-family: "Montserrat", sans-serif;
+  font-family: "Montserrat", "Arial", sans-serif;
   font-style: normal;
   font-weight: 600;
   font-size: 28px;
@@ -957,7 +939,7 @@ button,
   -ms-flex-order: 1;
   order: 1;
   z-index: 2;
-  font-family: "Montserrat", sans-serif;
+  font-family: "Montserrat", "Arial", sans-serif;
   font-style: normal;
   font-weight: 500;
   font-size: 18px;
@@ -968,7 +950,7 @@ button,
 .catalog p {
   margin: 0;
   margin-bottom: 3px;
-  font-family: "Montserrat", sans-serif;
+  font-family: "Montserrat", "Arial", sans-serif;
   font-style: normal;
   font-weight: 500;
   font-size: 14px;
@@ -979,7 +961,7 @@ button,
 .catalog span {
   display: block;
   margin-bottom: 9px;
-  font-family: "Montserrat", sans-serif;
+  font-family: "Montserrat", "Arial", sans-serif;
   font-style: normal;
   font-weight: 400;
   font-size: 14px;
@@ -992,7 +974,7 @@ button,
 }
 
 .catalog__btn {
-  font-family: "Montserrat", sans-serif;
+  font-family: "Montserrat", "Arial", sans-serif;
   font-style: normal;
   font-weight: 600;
   font-size: 14px;
@@ -1001,7 +983,7 @@ button,
   display: block;
   width: 100%;
   min-height: 40px;
-  margin-bottom: 12px;
+  margin-bottom: 13px;
   text-align: center;
   padding-top: 10px;
   cursor: pointer;
@@ -1071,7 +1053,7 @@ button,
 }
 
 .booking {
-  background: url("../../img/form.jpg") center no-repeat;
+  background: #bbdefb url("../../img/booking.jpg") center no-repeat;
   background-size: 100%;
   background-position-y: 5%;
   min-width: 100%;
@@ -1094,7 +1076,7 @@ button,
   margin: 0;
   margin-bottom: 8px;
   padding-left: 60px;
-  font-family: "Montserrat", sans-serif;
+  font-family: "Montserrat", "Arial", sans-serif;
   font-style: normal;
   font-weight: 700;
   font-size: 40px;
@@ -1106,7 +1088,7 @@ button,
   max-width: 450px;
   margin: 0;
   padding-left: 60px;
-  font-family: "Montserrat", sans-serif;
+  font-family: "Montserrat", "Arial", sans-serif;
   font-style: normal;
   font-weight: 400;
   font-size: 18px;
@@ -1131,7 +1113,7 @@ button,
 .booking__form h3 {
   margin: 0;
   margin-bottom: 27px;
-  font-family: "Montserrat", sans-serif;
+  font-family: "Montserrat", "Arial", sans-serif;
   font-style: normal;
   font-weight: 500;
   font-size: 18px;
@@ -1160,7 +1142,7 @@ button,
   background-color: #f9fbfd;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
-  font-family: "Montserrat", sans-serif;
+  font-family: "Montserrat", "Arial", sans-serif;
   font-style: normal;
   font-weight: 400;
   font-size: 14px;
@@ -1181,10 +1163,10 @@ button,
 
 .booking__form label[for=agreement] {
   position: relative;
-  padding: 3px 0px 3px 23px;
+  padding: 3px 0 3px 23px;
   margin-bottom: 29px;
   cursor: pointer;
-  font-family: "Montserrat", sans-serif;
+  font-family: "Montserrat", "Arial", sans-serif;
   font-style: normal;
   font-weight: 400;
   font-size: 10px;
@@ -1218,7 +1200,7 @@ input[type=checkbox]:hover + label {
   display: block;
   min-height: 43px;
   text-align: center;
-  font-family: "Montserrat", sans-serif;
+  font-family: "Montserrat", "Arial", sans-serif;
   font-style: normal;
   font-weight: 600;
   font-size: 14px;
@@ -1241,7 +1223,8 @@ input[type=checkbox]:hover + label {
   position: relative;
   min-width: 560px;
   height: 306px;
-  background: url("../img/map-desk.jpg") left no-repeat;
+  background: #f1efea url("../img/map-desk.jpg") left no-repeat;
+  background-size: cover;
 }
 
 .contacts__map-wrapper .contacts__map {
@@ -1261,7 +1244,7 @@ input[type=checkbox]:hover + label {
 .contacts h3 {
   margin: 0;
   margin-bottom: 32px;
-  font-family: "Montserrat", sans-serif;
+  font-family: "Montserrat", "Arial", sans-serif;
   font-style: normal;
   font-weight: 500;
   font-size: 18px;
@@ -1275,7 +1258,7 @@ input[type=checkbox]:hover + label {
   margin: 0;
   margin-bottom: 21px;
   padding-left: 28px;
-  font-family: "Montserrat", sans-serif;
+  font-family: "Montserrat", "Arial", sans-serif;
   font-style: normal;
   font-weight: 400;
   font-size: 16px;
@@ -1317,6 +1300,10 @@ input[type=checkbox]:hover + label {
   margin-right: 40px;
 }
 
+.footer__logo-img {
+  fill: #f9fbfd;
+}
+
 .footer__nav {
   margin-right: auto;
   display: -webkit-box;
@@ -1344,7 +1331,7 @@ input[type=checkbox]:hover + label {
   list-style: none;
   margin: 0;
   padding: 0;
-  padding-top: 10px;
+  padding-top: 3px;
   padding-left: 40px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1448,12 +1435,12 @@ input[type=checkbox]:hover + label {
     filter: none;
     margin-top: -93px;
     background-size: 110.7%;
-    background-position: 50.6% 54%;
+    background-position: 50.6% 97%;
   }
 
   .intro .container {
     padding-top: 301px;
-    padding-bottom: 301px;
+    padding-bottom: 274px;
   }
 
   .intro h1 {
@@ -1468,7 +1455,7 @@ input[type=checkbox]:hover + label {
   }
 
   .description .container {
-    padding-top: 64px;
+    padding-top: 91px;
     padding-bottom: 20px;
     margin-bottom: 73px;
   }
@@ -1476,11 +1463,11 @@ input[type=checkbox]:hover + label {
   .description__content {
     padding-top: 0;
     padding-right: 0;
+    min-width: 350px;
   }
 
   .description__image {
-    max-width: 329px;
-    max-height: 183px;
+    max-width: 100%;
     padding-top: 9px;
     padding-right: 5px;
   }
@@ -1510,25 +1497,23 @@ input[type=checkbox]:hover + label {
   }
 
   .advantages__item {
-    padding: 70px 10px 21px 20px;
+    padding: 26px 10px 20px 20px;
   }
 
-  .advantages__item::before {
-    top: 23px;
-    left: 16px;
+  .advantages__item--ship .advantages__icon {
+    width: 21px;
   }
 
-  .advantages__item--ship::before {
-    background-size: 21px 26px;
+  .advantages__item--services .advantages__icon {
+    width: 27px;
   }
 
-  .advantages__item--services::before {
-    background-size: 27px 26px;
-    left: 14px;
+  .advantages__item--tours .advantages__icon {
+    width: 36px;
   }
 
-  .advantages__item--tours::before {
-    background-size: 36px 26px;
+  .advantages__icon {
+    height: 26px;
   }
 
   .advantages__item h3 {
@@ -1598,10 +1583,10 @@ input[type=checkbox]:hover + label {
   .catalog__image--leo {
     -o-object-position: 60.2%;
     object-position: 60.2%;
-    -webkit-transform: scale(1.2);
-    -ms-transform: scale(1.2);
-    transform: scale(1.2);
-    height: 98.4%;
+    -webkit-transform: scaleX(1.2);
+    -ms-transform: scaleX(1.2);
+    transform: scaleX(1.2);
+    height: 100%;
   }
 
   .catalog__image--min {
@@ -1615,7 +1600,6 @@ input[type=checkbox]:hover + label {
   }
 
   .booking {
-    background: url("../../img/form.jpg") center no-repeat;
     background-size: 192.4%;
     background-position: 70.6% 6%;
   }
@@ -1661,7 +1645,8 @@ input[type=checkbox]:hover + label {
   .contacts__map-wrapper {
     min-width: 324px;
     height: 335px;
-    background: url("../img/map-tab.jpg") left no-repeat;
+    background: #f1efea url("../img/map-tab.jpg") left no-repeat;
+    background-size: cover;
   }
 
   .contacts__address-wrapper {
@@ -1692,6 +1677,11 @@ input[type=checkbox]:hover + label {
     padding-top: 3px;
   }
 
+  .footer__logo-img {
+    width: 38px;
+    height: 20px;
+  }
+
   .footer__nav {
     padding-top: 0;
   }
@@ -1702,17 +1692,17 @@ input[type=checkbox]:hover + label {
     padding-bottom: 5px;
   }
 
-  .footer__socials-list {
-    padding-top: 3px;
-  }
-
   .footer__socials-item:not(:last-child) {
-    margin-right: 20px;
+    margin-right: 22px;
   }
 
   .footer__socials-icon {
     width: 17px;
     height: 16px;
+  }
+
+  .footer__socials-icon--ok {
+    width: 10px;
   }
 }
 
@@ -1942,8 +1932,12 @@ input[type=checkbox]:hover + label {
     -webkit-box-align: center;
     -ms-flex-align: center;
     align-items: center;
-    padding-top: 58px;
+    padding-top: 57px;
     margin-bottom: 65px;
+  }
+
+  .description__content {
+    min-width: 100%;
   }
 
   .description__image {
@@ -1951,12 +1945,15 @@ input[type=checkbox]:hover + label {
     padding: 0;
     min-width: 290px;
     max-width: 100%;
+    -o-object-fit: contain;
+    object-fit: contain;
   }
 
   .description h2 {
     max-width: 100%;
     font-size: 24px;
-    margin-bottom: 15px;
+    line-height: 1.41;
+    margin-bottom: 16px;
     text-align: center;
   }
 
@@ -1965,9 +1962,13 @@ input[type=checkbox]:hover + label {
     margin-bottom: 43px;
   }
 
+  .advantages {
+    background-position: 0.7% 100%;
+  }
+
   .advantages .container {
     padding-top: 57px;
-    padding-bottom: 65px;
+    padding-bottom: 64px;
   }
 
   .advantages h2 {
@@ -1981,7 +1982,7 @@ input[type=checkbox]:hover + label {
   }
 
   .advantages__item {
-    padding-right: 22px;
+    padding: 25px 23px 21px 20px;
   }
 
   .advantages__item h3 {
@@ -2016,6 +2017,38 @@ input[type=checkbox]:hover + label {
     margin-bottom: 30px;
   }
 
+  .catalog__image--ast {
+    -o-object-position: 57%;
+    object-position: 57%;
+  }
+
+  .catalog__image--odi {
+    -o-object-position: 37.6%;
+    object-position: 37.6%;
+  }
+
+  .catalog__image--oli {
+    -o-object-position: 49.9%;
+    object-position: 49.9%;
+    height: 116.4%;
+  }
+
+  .catalog__image--leo {
+    -o-object-position: 58.2%;
+    object-position: 58.2%;
+    -webkit-transform: scaleX(1);
+    -ms-transform: scaleX(1);
+    transform: scaleX(1);
+  }
+
+  .catalog__image--min {
+    -o-object-position: 40.8%;
+    object-position: 40.8%;
+    -webkit-transform: scale(1, 0.9);
+    -ms-transform: scale(1, 0.9);
+    transform: scale(1, 0.9);
+  }
+
   .booking {
     background-size: 406.4%;
     background-position: 53.4% 56%;
@@ -2029,14 +2062,14 @@ input[type=checkbox]:hover + label {
   .booking h2 {
     font-size: 24px;
     line-height: 1.3;
-    margin-bottom: 15px;
+    margin-bottom: 14px;
   }
 
   .booking p {
     max-width: 260px;
-    margin-bottom: 31px;
+    margin-bottom: 33px;
     font-size: 16px;
-    line-height: 1.4;
+    line-height: 1.39;
   }
 
   .booking__form {
@@ -2073,7 +2106,8 @@ input[type=checkbox]:hover + label {
 
   .contacts__map-wrapper {
     min-width: 100%;
-    background: url("../img/map-mob.jpg") center no-repeat;
+    background: #f1efea url("../img/map-mob.jpg") center no-repeat;
+    background-size: cover;
     -webkit-box-ordinal-group: 2;
     -ms-flex-order: 1;
     order: 1;
@@ -2102,13 +2136,18 @@ input[type=checkbox]:hover + label {
     -webkit-box-direction: normal;
     -ms-flex-direction: column;
     flex-direction: column;
-    padding-top: 36px;
+    padding-top: 37px;
   }
 
   .footer__logo {
     width: 42px;
     height: 22px;
-    margin-bottom: 26px;
+    margin-bottom: 25px;
+  }
+
+  .footer__logo-img {
+    width: 42px;
+    height: 22px;
   }
 
   .footer__nav .nav__list {
@@ -2127,10 +2166,6 @@ input[type=checkbox]:hover + label {
     padding: 0;
     margin: 0;
   }
-
-  .footer__socials-item:not(:last-child) {
-    margin-right: 17px;
-  }
 }
 
 @media (max-width: 374px) {
@@ -2141,7 +2176,34 @@ input[type=checkbox]:hover + label {
 }
 
 @media (hover: hover) {
+  a:hover:not(.focus-visible) {
+    opacity: 0.6;
+  }
+
   .btn:hover:not(.focus-visible) {
     opacity: 0.8;
+  }
+
+  .header__logo:hover:not(.focus-visible) {
+    opacity: 1;
+  }
+
+  .booking__form input:hover:not(.focus-visible) {
+    opacity: 0.6;
+  }
+}
+
+@media (-webkit-min-device-pixel-ratio: 1.5), (-o-min-device-pixel-ratio: 3/2), (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+  .intro {
+    background-image: url("../../img/intro@2x.jpg");
+  }
+
+  .advantages {
+    background: #d8e5f4 url("../../img/advantages@2x.jpg") center no-repeat;
+    background-size: cover;
+  }
+
+  .booking {
+    background-image: url("../../img/booking@2x.jpg");
   }
 }

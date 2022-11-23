@@ -7,6 +7,10 @@
   flex-wrap: wrap;
 }
 
+.nav__item {
+  max-width: 300px;
+}
+
 .nav__item:not(:last-child) {
   margin-right: 33px;
 
