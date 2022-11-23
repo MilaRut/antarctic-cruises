@@ -405,7 +405,7 @@ template {
   font-weight: 600;
   font-family: "Montserrat";
   font-display: swap;
-  src: url("../fonts/Montserrat-Semibold.woff2") format("woff2"), url("../fonts/Montserrat-Semibold.woff") format("woff");
+  src: url("../fonts/Montserrat-SemiBold.woff2") format("woff2"), url("../fonts/Montserrat-SemiBold.woff") format("woff");
 }
 
 @font-face {
@@ -717,7 +717,7 @@ button,
 }
 
 .intro {
-  background: #1c5691 url("../../img/intro.jpg") center no-repeat;
+  background: #1c5691 url("../img/intro.jpg") center no-repeat;
   -webkit-filter: drop-shadow(0 4px 4px rgba(0, 0, 0, 0.25));
   filter: drop-shadow(0 4px 4px rgba(0, 0, 0, 0.25));
   background-size: 100%;
@@ -809,7 +809,7 @@ button,
 }
 
 .advantages {
-  background: #d8e5f4 url("../../img/advantages.jpg") center no-repeat;
+  background: #d8e5f4 url("../img/advantages.jpg") center no-repeat;
   background-size: cover;
   min-width: 100%;
 }
@@ -1053,7 +1053,7 @@ button,
 }
 
 .booking {
-  background: #bbdefb url("../../img/booking.jpg") center no-repeat;
+  background: #bbdefb url("../img/booking.jpg") center no-repeat;
   background-size: 100%;
   background-position-y: 5%;
   min-width: 100%;
@@ -1158,7 +1158,7 @@ button,
 }
 
 .booking__form input[type=checkbox]:checked + label::before {
-  background: #f9fbfd url("../../img/svg/checkbox-mark.svg") center no-repeat;
+  background: #f9fbfd url("../img/svg/checkbox-mark.svg") center no-repeat;
 }
 
 .booking__form label[for=agreement] {
@@ -1275,12 +1275,12 @@ input[type=checkbox]:hover + label {
 }
 
 .contacts__address p::before {
-  content: url("../../img/svg/contacts-address.svg");
+  content: url("../img/svg/contacts-address.svg");
   height: 22px;
 }
 
 .contacts__address a::before {
-  content: url("../../img/svg/contacts-phone.svg");
+  content: url("../img/svg/contacts-phone.svg");
   height: 18px;
 }
 
@@ -2195,15 +2195,15 @@ input[type=checkbox]:hover + label {
 
 @media (-webkit-min-device-pixel-ratio: 1.5), (-o-min-device-pixel-ratio: 3/2), (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
   .intro {
-    background-image: url("../../img/intro@2x.jpg");
+    background-image: url("../img/intro@2x.jpg");
   }
 
   .advantages {
-    background: #d8e5f4 url("../../img/advantages@2x.jpg") center no-repeat;
+    background: #d8e5f4 url("../img/advantages@2x.jpg") center no-repeat;
     background-size: cover;
   }
 
   .booking {
-    background-image: url("../../img/booking@2x.jpg");
+    background-image: url("../img/booking@2x.jpg");
   }
 }

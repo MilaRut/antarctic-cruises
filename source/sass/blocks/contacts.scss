@@ -100,7 +100,7 @@
 }
 
 .contacts__address p::before {
-  content: url("../../img/svg/contacts-address.svg");
+  content: url("../img/svg/contacts-address.svg");
   height: 22px;
 
   @include vp-1023 {
@@ -109,6 +109,6 @@
 }
 
 .contacts__address a::before {
-  content: url("../../img/svg/contacts-phone.svg");
+  content: url("../img/svg/contacts-phone.svg");
   height: 18px;
 }
