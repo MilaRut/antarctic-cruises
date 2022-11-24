@@ -5,16 +5,16 @@ const email = document.getElementById('email');
 const checkbox = document.getElementById('agreement');
 
 function validateForm() {
-  myform.addEventListener('submit', function () {
-
+  myform.addEventListener('submit', function (e) {
+    e.preventDefault();
     if (username.value && tel.value && email.value && checkbox.checked) {
       localStorage.setItem('username', username.value);
       localStorage.setItem('phone', tel.value);
       localStorage.setItem('email', email.value);
       myform.submit();
     }
+    myform.reset();
   });
-  myform.reset();
 }
 
 export {validateForm};

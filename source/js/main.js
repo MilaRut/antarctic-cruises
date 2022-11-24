@@ -10,6 +10,7 @@ window.addEventListener('DOMContentLoaded', () => {
   // ---------------------------------
 
   iosVhFix();
+  validateForm();
 
   // Modules
   // ---------------------------------
@@ -19,7 +20,6 @@ window.addEventListener('DOMContentLoaded', () => {
   window.addEventListener('load', () => {
     openMenu();
     closeMenu();
-    validateForm();
   });
 });
 
