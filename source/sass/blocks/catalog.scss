@@ -37,7 +37,8 @@
   position: relative;
   background-color: $tangaroa;
   padding: 29px 25px 22px;
-  min-height: 386px;
+  max-height: 386px;
+  height: 120vw;
   overflow: hidden;
 
   @include vp-1279 {

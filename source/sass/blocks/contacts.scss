@@ -81,6 +81,7 @@
 .contacts__address p,
 .contacts__address a {
   position: relative;
+  display: block;
   margin: 0;
   margin-bottom: 21px;
   padding-left: 28px;
@@ -111,4 +112,5 @@
 .contacts__address a::before {
   content: url("../img/svg/contacts-phone.svg");
   height: 18px;
+  top: 2px;
 }

@@ -569,8 +569,6 @@ button,
   -ms-flex-direction: column;
   flex-direction: column;
   min-height: 100vh;
-  /* stylelint-disable-next-line */
-  min-height: calc(100 * var(--vh, 1vh));
 }
 
 .wrapper .header,
@@ -899,7 +897,8 @@ button,
   position: relative;
   background-color: #011c40;
   padding: 29px 25px 22px;
-  min-height: 386px;
+  max-height: 386px;
+  height: 120vw;
   overflow: hidden;
 }
 
@@ -1255,6 +1254,7 @@ input[type=checkbox]:hover + label {
 .contacts__address p,
 .contacts__address a {
   position: relative;
+  display: block;
   margin: 0;
   margin-bottom: 21px;
   padding-left: 28px;
@@ -1282,6 +1282,7 @@ input[type=checkbox]:hover + label {
 .contacts__address a::before {
   content: url("../img/svg/contacts-phone.svg");
   height: 18px;
+  top: 2px;
 }
 
 .footer {
@@ -1294,6 +1295,7 @@ input[type=checkbox]:hover + label {
   display: -ms-flexbox;
   display: flex;
   padding-top: 50px;
+  padding-bottom: 25px;
 }
 
 .footer__logo {
@@ -1310,6 +1312,7 @@ input[type=checkbox]:hover + label {
   display: -ms-flexbox;
   display: flex;
   padding-top: 8px;
+  max-width: 67%;
 }
 
 .footer__nav .nav__list {
@@ -1322,9 +1325,7 @@ input[type=checkbox]:hover + label {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
+  padding-top: 8px;
 }
 
 .footer__socials-list {
@@ -1692,6 +1693,10 @@ input[type=checkbox]:hover + label {
     padding-bottom: 5px;
   }
 
+  .footer__socials {
+    padding-top: 1px;
+  }
+
   .footer__socials-item:not(:last-child) {
     margin-right: 22px;
   }
@@ -1755,6 +1760,18 @@ input[type=checkbox]:hover + label {
   .header__nav .nav__link {
     font-size: 18px;
     color: #011c40;
+  }
+
+  .header__overlay--open {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 100;
+    width: 100%;
+    background-color: rgba(0, 43, 102, 0.5);
+    overflow: auto;
   }
 
   .header__nav--open .header__button::before,
