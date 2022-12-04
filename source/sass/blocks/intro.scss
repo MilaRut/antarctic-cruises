@@ -1,40 +1,14 @@
-.intro {
-  background: #1c5691 url("../img/intro.jpg") center no-repeat;
-  filter: drop-shadow(0 4px 4px rgba(0, 0, 0, 0.25));
-  background-size: 100%;
-  min-width: 100%;
-  margin-top: -100px;
-
-  @include retina {
-    background-image: url("../img/intro@2x.jpg");
-  }
-
-  @include vp-1023 {
-    filter: none;
-    margin-top: -93px;
-    background-size: 110.7%;
-    background-position: 50.6% 97%;
-  }
-
-  @include vp-767 {
-    margin-top: -60px;
-    background-size: 240%;
-    background-position-x: 45.6%;
-    background-position-y: 6.7%;
-  }
-}
-
 .intro .container {
-  padding-top: 271px;
+  padding-top: 191px;
   padding-bottom: 278px;
 
   @include vp-1023 {
-    padding-top: 301px;
+    padding-top: 211px;
     padding-bottom: 274px;
   }
 
   @include vp-767 {
-    padding-top: 176px;
+    padding-top: 127px;
     padding-bottom: 178px;
   }
 }

@@ -10,13 +10,30 @@
   }
 }
 
+.catalog h2 {
+  margin: 0;
+  text-align: center;
+  margin-bottom: 49px;
+
+  @include font-settings(600, 28px, 1.5, $tangaroa);
+
+  @include vp-1023 {
+    font-size: 26px;
+  }
+
+  @include vp-767 {
+    font-size: 24px;
+    margin-bottom: 30px;
+  }
+}
+
 .catalog__list {
   margin: 0;
   margin-bottom: 120px;
   padding: 0 15px;
   list-style: none;
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(4, minmax(100px, 1fr));
   gap: 30px;
 
   @include vp-1023 {
@@ -36,16 +53,19 @@
   flex-direction: column;
   position: relative;
   background-color: $tangaroa;
-  padding: 29px 25px 22px;
+  height: 28.25vw;
   max-height: 386px;
-  height: 120vw;
+  // padding: 29px 25px 22px;
+  padding: 11% 10% 8.7%;
   overflow: hidden;
 
-  @include vp-1279 {
-    padding: 10px 12px;
-  }
+  // @include vp-1279 {
+  //   padding: calc($index * 0.633) calc($index * 0.633) calc($index * 0.633);
+  // }
 
   @include vp-1023 {
+    height: 50.26vw;
+    max-height: 386px;
     padding: 29px 30px 27px;
 
     &:hover {
@@ -54,6 +74,8 @@
   }
 
   @include vp-767 {
+    height: 120.63vw;
+    max-height: 120.63vw;
     padding: 29px 20px 17px;
 
     &:hover {
@@ -74,23 +96,7 @@
 
   &:hover::before {
     background: none;
-  }
-}
-
-.catalog h2 {
-  margin: 0;
-  text-align: center;
-  margin-bottom: 49px;
-
-  @include font-settings(600, 28px, 1.5, $tangaroa);
-
-  @include vp-1023 {
-    font-size: 26px;
-  }
-
-  @include vp-767 {
-    font-size: 24px;
-    margin-bottom: 30px;
+    z-index: -1;
   }
 }
 
@@ -101,6 +107,11 @@
   z-index: 2;
 
   @include font-settings(500, 18px, 1.5, $alice-blue);
+}
+
+.catalog__content {
+  overflow: auto;
+  margin-bottom: auto;
 }
 
 .catalog p {
@@ -115,10 +126,6 @@
   margin-bottom: 9px;
 
   @include font-settings(400, 14px, 1.43, $quartz);
-}
-
-.catalog span:last-of-type {
-  margin-bottom: auto;
 }
 
 .catalog__btn {
