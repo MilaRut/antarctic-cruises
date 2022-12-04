@@ -9,14 +9,16 @@ const headerButton = document.querySelector('.header__button');
 const navLinks = headerNav.querySelectorAll('.nav__link');
 const headerButtonNoJs = document.querySelector('.header__label');
 const overlay = document.querySelector('.header__overlay');
+const headerCheckbox = document.querySelector('.header__checkbox');
 
 headerButton.classList.remove('no-js');
 headerButtonNoJs.classList.remove('no-js');
+headerCheckbox.setAttribute('tabindex', '-1');
 
 function toggleMenu() {
   headerNav.classList.toggle('header__nav--open');
 
-  if (headerNav.classList.contains('header__nav--open') && screen.width < 768) {
+  if (headerNav.classList.contains('header__nav--open')) {
     scrollLock.disableScrolling();
     overlay.classList.add('header__overlay--open');
     focusLock.lock('.header');
@@ -52,6 +54,16 @@ function closeMenu() {
       toggleMenu();
     }
   });
+
+  window.addEventListener('resize', toggleFocusbyResize);
+
+  function toggleFocusbyResize() {
+    if (screen.width >= 768) {
+      focusLock.unlock();
+    } else if (screen.width < 768 && headerNav.classList.contains('header__nav--open')) {
+      focusLock.lock('.header');
+    }
+  }
 }
 
 export {openMenu, closeMenu};
