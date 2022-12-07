@@ -91,7 +91,7 @@
   background-color: $tangaroa;
   display: flex;
   flex-direction: column;
-  align-self: center;
+  align-self: flex-start;
 
   @include vp-1023 {
     margin: 0 auto;

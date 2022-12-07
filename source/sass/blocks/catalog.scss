@@ -55,17 +55,13 @@
   background-color: $tangaroa;
   height: 28.25vw;
   max-height: 386px;
-  // padding: 29px 25px 22px;
   padding: 11% 10% 8.7%;
   overflow: hidden;
 
-  // @include vp-1279 {
-  //   padding: calc($index * 0.633) calc($index * 0.633) calc($index * 0.633);
-  // }
-
   @include vp-1023 {
+    width: 40.2vw;
     height: 50.26vw;
-    max-height: 386px;
+    max-height: 50.26vw;
     padding: 29px 30px 27px;
 
     &:hover {
@@ -74,6 +70,7 @@
   }
 
   @include vp-767 {
+    width: 100%;
     height: 120.63vw;
     max-height: 120.63vw;
     padding: 29px 20px 17px;
@@ -244,16 +241,22 @@
   }
 }
 
-.catalog__item:hover .catalog__image {
+.catalog__item:hover .catalog__image,
+.catalog__btn:focus ~ picture > .catalog__image {
   z-index: -1;
 }
 
-.catalog__item:hover h3 {
-  order: 0;
+.catalog__item:hover h3,
+.catalog__btn:focus-within ~ h3 {
+  order: -1;
   margin-bottom: 12px;
   padding: 0;
 }
 
 .catalog__item:hover .catalog__btn {
+  z-index: 2;
+}
+
+.catalog__btn:focus {
   z-index: 2;
 }

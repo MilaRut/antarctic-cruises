@@ -101,6 +101,10 @@
   }
 }
 
+.contacts__address a {
+  max-width: 200px;
+}
+
 .contacts__address p::before {
   content: url("../img/svg/contacts-address.svg");
   height: 22px;
